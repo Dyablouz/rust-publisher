@@ -11,3 +11,9 @@ The URL tells the publisher how to connect to RabbitMQ using AMQP. The first `gu
 ## Running RabbitMQ
 
 ![RabbitMQ page](RabbitMQ.png)
+
+## Event Processing
+
+![Console Publisher](Publisher.png)
+
+![Console Subscriber](Subscriber.png)
