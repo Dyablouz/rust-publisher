@@ -17,3 +17,9 @@ The URL tells the publisher how to connect to RabbitMQ using AMQP. The first `gu
 ![Console Publisher](Publisher.png)
 
 ![Console Subscriber](Subscriber.png)
+
+When I run cargo run for subscriber, the subscriber starts and connects to RabbitMQ at amqp://guest:guest@localhost:5672. It then listens to the user_created queue and waits for incoming messages.
+
+When I run cargo run for publisher, the publisher connects to the same RabbitMQ broker and sends 5 UserCreatedEventMessage events to the user_created queue. Each event contains a user_id and a user_name.
+
+After the publisher sends those events, the subscriber console prints the received messages. This shows that the messages were successfully sent to RabbitMQ by the publisher, then consumed and processed by the subscriber.
